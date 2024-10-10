@@ -1,3 +1,8 @@
+<?
+require __DIR__ . "/db/class/categories.php";
+require __DIR__ . "/db/class/products.php";
+require __DIR__ . "/db/class/detailsclass.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
