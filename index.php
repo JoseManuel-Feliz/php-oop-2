@@ -11,6 +11,10 @@ require_once __DIR__ . "/db/class/detailsclass.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP STYLESHEET CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css'
+        integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=='
+        crossorigin='anonymous' />
     <!-- CUSTOM STYLESHEET CSS -->
     <link rel="stylesheet" href="./app/css/style.css">
     <!-- AXIOS SCRIPT -->
@@ -27,40 +31,42 @@ require_once __DIR__ . "/db/class/detailsclass.php";
 </head>
 
 <body>
-    <main>
-        <div class="card">
+
+
+
+    <main class="container">
+        <div class="row row-cols-4 g-5">
             <?php foreach ($products as $product) { ?>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-img-top">
+                            <?php foreach ($product->details as $detail) { ?>
+                                <?= $detail ?>
+                            <?php } ?>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <?php foreach ($product->categories as $category) { ?>
+                                    <?= $category ?>
+                                <?php } ?>
+                            </p>
 
-                <div>
-                    <?php foreach ($product->details as $detail) { ?>
-                        <?= $detail ?>
-                    <?php } ?>
+                            <p>
+                                <?= $product->name ?>
+                            </p>
+                            <p>
+                                <?= $product->price ?>
+                            </p>
+                            <p>
+                                <?= $product->type ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div>
-
-                    <p>
-                        <?php foreach ($product->categories as $category) { ?>
-                            <?= $category ?>
-                        <?php } ?>
-                    </p>
-
-                    <p>
-                        <?= $product->name ?>
-                    </p>
-                    <p>
-                        <?= $product->price ?>
-                    </p>
-                    <p>
-                        <?= $product->type ?>
-                    </p>
-                <?php } ?>
-                </div>
-
-
-
+            <?php } ?>
         </div>
     </main>
+
 </body>
 
 </html>
