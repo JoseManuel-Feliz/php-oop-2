@@ -1,4 +1,6 @@
 <?
+
+require_once __DIR__ . "/db/data.php";
 require_once __DIR__ . "/db/class/categories.php";
 require_once __DIR__ . "/db/class/products.php";
 require_once __DIR__ . "/db/class/detailsclass.php";
@@ -25,7 +27,40 @@ require_once __DIR__ . "/db/class/detailsclass.php";
 </head>
 
 <body>
+    <main>
+        <div class="card">
+            <?php foreach ($products as $product) { ?>
 
+                <div>
+                    <?php foreach ($product->details as $detail) { ?>
+                        <?= $detail ?>
+                    <?php } ?>
+                </div>
+
+                <div>
+
+                    <p>
+                        <?php foreach ($product->categories as $category) { ?>
+                            <?= $category ?>
+                        <?php } ?>
+                    </p>
+
+                    <p>
+                        <?= $product->name ?>
+                    </p>
+                    <p>
+                        <?= $product->price ?>
+                    </p>
+                    <p>
+                        <?= $product->type ?>
+                    </p>
+                <?php } ?>
+                </div>
+
+
+
+        </div>
+    </main>
 </body>
 
 </html>
