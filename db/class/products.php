@@ -5,15 +5,15 @@ class product
     public $name;
     public $type;
     public $price;
-    //public $details;
+    public  $details;
     public  object $categories;
 
-    public function __construct(string $name, string $type, int $price, Categories $categories, /* Details $details */)
+    public function __construct(string $name, string $type, int $price, Categories $categories, Details $details)
     {
         $this->name = $name;
         $this->price = $price;
         $this->type = $type;
-        //$this->details = $details;
+        $this->details = $details;
         $this->categories = $categories;
         /* 
 
