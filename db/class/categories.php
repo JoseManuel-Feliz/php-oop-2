@@ -9,7 +9,10 @@ class categories
         return $this->species;
     }
 
-    public function SetCategorySpecies($species) {}
+    public function SetCategorySpecies($species)
+    {
+        $this->species = $species;
+    }
 
 
     public function __construct(string $species)
