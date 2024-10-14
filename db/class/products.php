@@ -2,18 +2,18 @@
 
 class product
 {
-    public $name;
-    public $type;
-    public $price;
-    public  $details;
+    public string $name;
+    public string $price;
+    public  string $img;
+    public string $description;
     public  object $categories;
 
-    public function __construct(string $name, string $type, int $price, Categories $categories, Details $details)
+    public function __construct(string $name, int $price, string $img, string $description, Categories $categories)
     {
         $this->name = $name;
         $this->price = $price;
-        $this->type = $type;
-        $this->details = $details;
+        $this->img = $img;
+        $this->description = $description;
         $this->categories = $categories;
         /* 
 
@@ -29,10 +29,7 @@ class product
     {
         return $this->name;
     }
-    public function GetProductType()
-    {
-        return $this->type;
-    }
+
     public function GetProductPrice()
     {
         return $this->price;
@@ -41,10 +38,8 @@ class product
     {
         $this->name = $name;
     }
-    public function SetProductType($type)
-    {
-        $this->type = $type;
-    }
+
+
     public function SetProductPrice($price)
     {
         $this->price = $price;

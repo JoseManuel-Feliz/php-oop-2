@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/class/categories.php";
 require_once __DIR__ . "/class/products.php";
-require_once __DIR__ . "/class/detailsclass.php";
+require_once __DIR__ . "/class/extends-class/product-type.php";
 
 /*  
 TODO 
@@ -16,44 +16,44 @@ $products = [
     */
 
     //DRY FOOD
-    new product('Natural Trainer', 'Food', 14, new Categories('Cat'),new Details ('img goes here')),
-    new product('Purina One', 'Food', 8, new Categories('Kitten'),new Details ('img goes here')),
-    new product('Whiskas', 'Food', 5, new Categories('Kitten'),new Details ('img goes here')),
-    new product('Virtus Cat Sterilised', 'Food', 23, new Categories('Cat'),new Details ('img goes here')),
+    new Type('Natural Trainer', 14, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), 'Natural Trainer', 'Food', 'Dry Food'),
+    new Type('Purina One', 8, 'img goes here', '', new Categories('Kitten', 'cat-icon.png'), '', '', ''),
+    new Type('Whiskas', 5, 'img goes here', '', new Categories('Kitten', 'cat-icon.png'), '', '', ''),
+    new Type('Virtus Cat Sterilised', 23, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
     //WET FOOD
-    new product('Felix', 'Food', 20, new Categories('Cat'),new Details ('img goes here')),
-    new product('Felix', 'Food', 7, new Categories('Kitten'),new Details ('img goes here')),
-    new product('Schesir Cat', 'Food', 5, new Categories('Cat'),new Details ('img goes here')),
-    new product('Purina Gourmet', 'Food', 16, new Categories('Cat'),new Details ('img goes here')),
+    new Type('Felix', 20, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Felix', 7, 'img goes here', '', new Categories('Kitten', 'cat-icon.png'), '', '', ''),
+    new Type('Schesir Cat', 5, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Purina Gourmet', 16, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
     // CAT LITTER
-    new product('CatSan', 'Cat Litter', 16, new Categories('Cat'),new Details ('img goes here')),
-    new product("Biokat's", 'Cat Litter', 11, new Categories('Cat'),new Details ('img goes here')),
-    new product('Sanicat', 'Cat Litter', 11, new Categories('Cat'),new Details ('img goes here')),
-    new product('Ever Clean', 'Cat Litter', 18, new Categories('Cat'),new Details ('img goes here')),
+    new Type('CatSan', 16, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type("Biokat's", 11, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Sanicat', 11, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Ever Clean', 18, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
     //CAT TOWERS
-    new product('Trixie', 'Cat Tower', 55, new Categories('Cat'),new Details ('img goes here')),
-    new product('Topeakmart', 'Cat Tower', 70, new Categories('Cat'),new Details ('img goes here')),
+    new Type('Trixie', 55, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Topeakmart', 70, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
     //CAT SCRATCHER
-    new product('EveryYay', 'Cat Scratcher', 25, new Categories('Cat'),new Details ('img goes here')),
-    new product('Anione', 'Cat Scratcher', 13, new Categories('Cat'),new Details ('img goes here')),
+    new Type('EveryYay', 25, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Anione', 13, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
     //CAT CARRIER
-    new product('Pet Around You', 'Cat Carrier', 17, new Categories('Cat'),new Details ('img goes here')),
-    new product('Sherpa', 'Cat Carrier', 75, new Categories('Cat'),new Details ('img goes here')),
+    new Type('Pet Around You', 17, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Sherpa', 75, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
     //CAT TOYS 
-    new product('Grey Mice', 'Cat Toy', 3, new Categories('Cat'),new Details ('img goes here')),
-    new product('Laser Pointer', 'Cat Toy', 5, new Categories('Cat'),new Details ('img goes here')),
-    new product('Mice Cat Teaser', 'Cat Toy', 5, new Categories('Cat'),new Details ('img goes here')),
+    new Type('Grey Mice', 3, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Laser Pointer', 5, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Mice Cat Teaser', 5, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
     //CAT BED
-    new product('Cat Pad', 'Cat Pad', 10, new Categories('Cat'),new Details ('img goes here')),
-    new product('Cat Bed', 'Cat Bed', 30, new Categories('Cat'),new Details ('img goes here')),
+    new Type('Cat Pad', 10, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
+    new Type('Cat Bed', 30, 'img goes here', '', new Categories('Cat', 'cat-icon.png'), '', '', ''),
 
 ];
 
-//var_dump($products);
+var_dump($products);
