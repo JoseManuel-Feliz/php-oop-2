@@ -3,7 +3,7 @@
 require_once __DIR__ . "/db/data.php";
 require_once __DIR__ . "/db/class/categories.php";
 require_once __DIR__ . "/db/class/products.php";
-require_once __DIR__ . "/db/class/detailsclass.php";
+require_once __DIR__ . "/db/class/extends-class/product-type.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,19 +45,19 @@ require_once __DIR__ . "/db/class/detailsclass.php";
                             <?php } ?>
                         </div>
                         <div class="card-body">
-                            <p>
+                            <p class="card-title">
                                 <?php foreach ($product->categories as $category) { ?>
                                     <?= $category ?>
                                 <?php } ?>
                             </p>
 
-                            <p>
+                            <p class="text-text">
                                 <?= $product->name ?>
                             </p>
-                            <p>
+                            <p class="text-text">
                                 <?= $product->price ?>
                             </p>
-                            <p>
+                            <p class="text-text">
                                 <?= $product->type ?>
                             </p>
                         </div>
